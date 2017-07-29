@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_02.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_02.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/progress_dialog.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/progress_dialog.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_guide.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_guide.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_shop2.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_shop2.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_look.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_look.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_myrelease.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_myrelease.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_title.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_title.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/my_dialog.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/my_dialog.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/personal_center.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/personal_center.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_shop1.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_shop1.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_04.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_04.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_register.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/setpassword_activity.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/setpassword_activity.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_release.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_release.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/info_bottom.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/info_bottom.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_01.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_01.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/girdview_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/girdview_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/message_list_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/message_list_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/info_main.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/info_main.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/look_info.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/look_info.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_shop3.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_shop3.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/login_activity.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/login_activity.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/photo_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/photo_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/spinner_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/listview_footer.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/listview_footer.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/pulldownview_header.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/pulldownview_header.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_leave_message.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_leave_message.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/guide_item_03.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/guide_item_03.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/shop_list_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/shop_list_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/layout/activity_mymsg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/layout/activity_mymsg.xml"
+    }
+]

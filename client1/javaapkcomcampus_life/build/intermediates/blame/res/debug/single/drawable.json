@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_first_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_first_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/spinner_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/spinner_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/welcome_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/welcome_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_middle_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_middle_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_register_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_register_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/tel_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/tel_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/list_item.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/list_item.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/button_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/button_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_center_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_center_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/vpi__tab_indicator.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable/vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_last_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_last_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/home_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/home_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_login_selector.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_login_selector.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/msg_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/msg_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/custom_tab_indicator.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/custom_tab_indicator.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_bottom_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_bottom_bg.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable/btn_top_bg.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable/btn_top_bg.xml"
+    }
+]

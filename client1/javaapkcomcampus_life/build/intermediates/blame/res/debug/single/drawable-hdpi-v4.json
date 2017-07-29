@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_unselected_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/welcome_1.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/welcome_1.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/welcome_2.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/welcome_2.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_unselected_pressed_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/welcome_4.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/welcome_4.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/addpic.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/addpic.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_selected_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_selected_pressed_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/sub_img.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/sub_img.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_selected_focused_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/layout_back.jpg",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/drawable-hdpi/layout_back.jpg"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-hdpi-v4/vpi__tab_unselected_focused_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-hdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/anim/rotate_down.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/anim/rotate_down.xml"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/anim/rotate_up.xml",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/src/main/res/anim/rotate_up.xml"
+    }
+]

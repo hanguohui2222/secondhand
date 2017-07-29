@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_selected_pressed_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_selected_focused_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_selected_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_selected_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_unselected_pressed_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_unselected_focused_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/res/merged/debug/drawable-xhdpi-v4/vpi__tab_unselected_holo.9.png",
+        "source": "/home/han/hangh/code/github/client1/javaapkcomcampus_life/build/intermediates/exploded-aar/client1/library/unspecified/res/drawable-xhdpi-v4/vpi__tab_unselected_holo.9.png"
+    }
+]
