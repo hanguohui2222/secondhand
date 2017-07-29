@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iread.mapper.ArticleMapper" >
+  <resultMap id="BaseResultMap" type="com.iread.pojo.Article" >
+    <id column="id" property="id" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="look_num" property="lookNum" jdbcType="INTEGER" />
+    <result column="comment_num" property="commentNum" jdbcType="INTEGER" />
+    <result column="like_num" property="likeNum" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="is_visible" property="isVisible" jdbcType="BIT" />
+    <result column="is_display" property="isDisplay" jdbcType="BIT" />
+    <result column="book_img_path" property="bookImgPath" jdbcType="VARCHAR" />
+    <result column="audio_path" property="audioPath" jdbcType="VARCHAR" />
+    <result column="audio_duration" property="audioDuration" jdbcType="INTEGER" />
+    <result column="audio_info" property="audioInfo" jdbcType="VARCHAR" />
+    <result column="abstract_info" property="abstractInfo" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.iread.pojo.Article" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, user_id, title, look_num, comment_num, like_num, create_time, is_visible, is_display, 
+    book_img_path, audio_path, audio_duration, audio_info, abstract_info
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.iread.pojo.ArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.iread.pojo.ArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article
+    where id = #{id,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from article
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.iread.pojo.ArticleExample" >
+    delete from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.iread.pojo.Article" >
+    insert into article (id, user_id, title, 
+      look_num, comment_num, like_num, 
+      create_time, is_visible, is_display, 
+      book_img_path, audio_path, audio_duration, 
+      audio_info, abstract_info, content
+      )
+    values (#{id,jdbcType=CHAR}, #{userId,jdbcType=CHAR}, #{title,jdbcType=VARCHAR}, 
+      #{lookNum,jdbcType=INTEGER}, #{commentNum,jdbcType=INTEGER}, #{likeNum,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{isVisible,jdbcType=BIT}, #{isDisplay,jdbcType=BIT}, 
+      #{bookImgPath,jdbcType=VARCHAR}, #{audioPath,jdbcType=VARCHAR}, #{audioDuration,jdbcType=INTEGER}, 
+      #{audioInfo,jdbcType=VARCHAR}, #{abstractInfo,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.iread.pojo.Article" >
+    insert into article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="lookNum != null" >
+        look_num,
+      </if>
+      <if test="commentNum != null" >
+        comment_num,
+      </if>
+      <if test="likeNum != null" >
+        like_num,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="isVisible != null" >
+        is_visible,
+      </if>
+      <if test="isDisplay != null" >
+        is_display,
+      </if>
+      <if test="bookImgPath != null" >
+        book_img_path,
+      </if>
+      <if test="audioPath != null" >
+        audio_path,
+      </if>
+      <if test="audioDuration != null" >
+        audio_duration,
+      </if>
+      <if test="audioInfo != null" >
+        audio_info,
+      </if>
+      <if test="abstractInfo != null" >
+        abstract_info,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=CHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=CHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="lookNum != null" >
+        #{lookNum,jdbcType=INTEGER},
+      </if>
+      <if test="commentNum != null" >
+        #{commentNum,jdbcType=INTEGER},
+      </if>
+      <if test="likeNum != null" >
+        #{likeNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isVisible != null" >
+        #{isVisible,jdbcType=BIT},
+      </if>
+      <if test="isDisplay != null" >
+        #{isDisplay,jdbcType=BIT},
+      </if>
+      <if test="bookImgPath != null" >
+        #{bookImgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="audioPath != null" >
+        #{audioPath,jdbcType=VARCHAR},
+      </if>
+      <if test="audioDuration != null" >
+        #{audioDuration,jdbcType=INTEGER},
+      </if>
+      <if test="audioInfo != null" >
+        #{audioInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="abstractInfo != null" >
+        #{abstractInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.iread.pojo.ArticleExample" resultType="java.lang.Integer" >
+    select count(*) from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update article
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=CHAR},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lookNum != null" >
+        look_num = #{record.lookNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.commentNum != null" >
+        comment_num = #{record.commentNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.likeNum != null" >
+        like_num = #{record.likeNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isVisible != null" >
+        is_visible = #{record.isVisible,jdbcType=BIT},
+      </if>
+      <if test="record.isDisplay != null" >
+        is_display = #{record.isDisplay,jdbcType=BIT},
+      </if>
+      <if test="record.bookImgPath != null" >
+        book_img_path = #{record.bookImgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.audioPath != null" >
+        audio_path = #{record.audioPath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.audioDuration != null" >
+        audio_duration = #{record.audioDuration,jdbcType=INTEGER},
+      </if>
+      <if test="record.audioInfo != null" >
+        audio_info = #{record.audioInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.abstractInfo != null" >
+        abstract_info = #{record.abstractInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update article
+    set id = #{record.id,jdbcType=CHAR},
+      user_id = #{record.userId,jdbcType=CHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      look_num = #{record.lookNum,jdbcType=INTEGER},
+      comment_num = #{record.commentNum,jdbcType=INTEGER},
+      like_num = #{record.likeNum,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      is_visible = #{record.isVisible,jdbcType=BIT},
+      is_display = #{record.isDisplay,jdbcType=BIT},
+      book_img_path = #{record.bookImgPath,jdbcType=VARCHAR},
+      audio_path = #{record.audioPath,jdbcType=VARCHAR},
+      audio_duration = #{record.audioDuration,jdbcType=INTEGER},
+      audio_info = #{record.audioInfo,jdbcType=VARCHAR},
+      abstract_info = #{record.abstractInfo,jdbcType=VARCHAR},
+      content = #{record.content,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update article
+    set id = #{record.id,jdbcType=CHAR},
+      user_id = #{record.userId,jdbcType=CHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      look_num = #{record.lookNum,jdbcType=INTEGER},
+      comment_num = #{record.commentNum,jdbcType=INTEGER},
+      like_num = #{record.likeNum,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      is_visible = #{record.isVisible,jdbcType=BIT},
+      is_display = #{record.isDisplay,jdbcType=BIT},
+      book_img_path = #{record.bookImgPath,jdbcType=VARCHAR},
+      audio_path = #{record.audioPath,jdbcType=VARCHAR},
+      audio_duration = #{record.audioDuration,jdbcType=INTEGER},
+      audio_info = #{record.audioInfo,jdbcType=VARCHAR},
+      abstract_info = #{record.abstractInfo,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.iread.pojo.Article" >
+    update article
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="lookNum != null" >
+        look_num = #{lookNum,jdbcType=INTEGER},
+      </if>
+      <if test="commentNum != null" >
+        comment_num = #{commentNum,jdbcType=INTEGER},
+      </if>
+      <if test="likeNum != null" >
+        like_num = #{likeNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isVisible != null" >
+        is_visible = #{isVisible,jdbcType=BIT},
+      </if>
+      <if test="isDisplay != null" >
+        is_display = #{isDisplay,jdbcType=BIT},
+      </if>
+      <if test="bookImgPath != null" >
+        book_img_path = #{bookImgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="audioPath != null" >
+        audio_path = #{audioPath,jdbcType=VARCHAR},
+      </if>
+      <if test="audioDuration != null" >
+        audio_duration = #{audioDuration,jdbcType=INTEGER},
+      </if>
+      <if test="audioInfo != null" >
+        audio_info = #{audioInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="abstractInfo != null" >
+        abstract_info = #{abstractInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.iread.pojo.Article" >
+    update article
+    set user_id = #{userId,jdbcType=CHAR},
+      title = #{title,jdbcType=VARCHAR},
+      look_num = #{lookNum,jdbcType=INTEGER},
+      comment_num = #{commentNum,jdbcType=INTEGER},
+      like_num = #{likeNum,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      is_visible = #{isVisible,jdbcType=BIT},
+      is_display = #{isDisplay,jdbcType=BIT},
+      book_img_path = #{bookImgPath,jdbcType=VARCHAR},
+      audio_path = #{audioPath,jdbcType=VARCHAR},
+      audio_duration = #{audioDuration,jdbcType=INTEGER},
+      audio_info = #{audioInfo,jdbcType=VARCHAR},
+      abstract_info = #{abstractInfo,jdbcType=VARCHAR},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.iread.pojo.Article" >
+    update article
+    set user_id = #{userId,jdbcType=CHAR},
+      title = #{title,jdbcType=VARCHAR},
+      look_num = #{lookNum,jdbcType=INTEGER},
+      comment_num = #{commentNum,jdbcType=INTEGER},
+      like_num = #{likeNum,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      is_visible = #{isVisible,jdbcType=BIT},
+      is_display = #{isDisplay,jdbcType=BIT},
+      book_img_path = #{bookImgPath,jdbcType=VARCHAR},
+      audio_path = #{audioPath,jdbcType=VARCHAR},
+      audio_duration = #{audioDuration,jdbcType=INTEGER},
+      audio_info = #{audioInfo,jdbcType=VARCHAR},
+      abstract_info = #{abstractInfo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>

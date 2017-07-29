@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iread.mapperExtend.RecommendExtendMapper">
+
+	<resultMap id="BaseResultMap" type="com.iread.pojo.Recommend">
+		<id column="id" property="id" jdbcType="CHAR" />
+		<result column="user_id" property="userId" jdbcType="CHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="book_img" property="bookImg" jdbcType="VARCHAR" />
+		<result column="book_title" property="bookTitle" jdbcType="VARCHAR" />
+		<result column="book_author" property="bookAuthor" jdbcType="VARCHAR" />
+		<result column="look_num" property="lookNum" jdbcType="INTEGER" />
+		<result column="comment_num" property="commentNum" jdbcType="INTEGER" />
+		<result column="like_num" property="likeNum" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	
+	<!-- 查询通用推荐列表的resultMap，包含推荐数据，以及推荐对应的用户信息 -->
+	<resultMap type="com.iread.pojoExtend.RecommendCustom" id="RcdCommonListResultMap" extends="BaseResultMap">
+		<!-- 映射用户信息,一对一映射，每条推荐对应一个用户信息
+		-->
+		<association property="user" javaType="com.iread.pojo.User">
+			<id column="user_id" property="id"/>
+			<result column="icon" property="icon"/>
+			<result column="username" property="username"/>
+		</association>
+	</resultMap>
+
+	<!-- 查询推荐，关联查询评论量，收藏量 以及用户信息-->
+	<select id="findRcdList" resultMap="RcdCommonListResultMap">
+		SELECT recommend.id, recommend.user_id, recommend.content, 
+		recommend.book_img, recommend.book_title, recommend.book_author,
+		recommend.create_time, recommend.look_num,
+		COUNT(`comment`.id) as comment_num, COUNT(collect.create_time) as like_num,
+		`user`.icon, `user`.username
+		FROM recommend LEFT JOIN `comment` ON recommend.id = `comment`.subject_id 
+		LEFT JOIN collect ON recommend.id = collect.subject_id
+		LEFT JOIN `user` ON recommend.user_id = `user`.id
+		GROUP BY recommend.id
+		ORDER BY recommend.create_time DESC
+	</select>
+</mapper>

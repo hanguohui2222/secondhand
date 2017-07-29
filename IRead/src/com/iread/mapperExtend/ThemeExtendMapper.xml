@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iread.mapperExtend.ThemeExtendMapper">
+
+	<resultMap id="BaseResultMap" type="com.iread.pojo.Theme" >
+    <id column="id" property="id" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="subtitle" property="subtitle" jdbcType="VARCHAR" />
+    <result column="suit_sb" property="suitSb" jdbcType="VARCHAR" />
+    <result column="hot" property="hot" jdbcType="INTEGER" />
+    <result column="theme_img" property="themeImg" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.iread.pojo.ThemeWithBLOBs" extends="BaseResultMap" >
+    <result column="describe" property="describe" jdbcType="LONGVARCHAR" />
+    <result column="subscribe_info" property="subscribeInfo" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  
+  <!-- 查询专栏信息，关联查询最近更新的文章 -->
+  <resultMap type="com.iread.pojoExtend.ThemeCustom" id="ThemeCommonResultMap" extends="BaseResultMap">
+  	<!-- 一条专栏记录对应一条最近的专栏信息 -->
+  	<association property="lastArticle" javaType="com.iread.pojo.ThemeArticle">
+  		<id column="last_id" property="id" />
+  		<result column="last_title" property="title" />
+  		<result column="last_update" property="createTime" />
+  	</association>
+  </resultMap>
+	<select id="findAllList"  resultMap="ThemeCommonResultMap">
+		SELECT theme.id, theme.title, theme.subtitle, theme.theme_img, theme.user_id,
+		`user`.username, a_id as last_id,a_title AS last_title, a_create_time as last_update,
+		COUNT(collect.create_time) AS hot
+		FROM theme 
+		LEFT JOIN collect ON theme.id = collect.subject_id
+		LEFT JOIN 
+		(SELECT A.id a_id, A.title a_title, A.create_time a_create_time, A.theme_id as fk_id 
+		FROM theme_article as A JOIN theme WHERE theme.id = A.theme_id ORDER BY A.create_time DESC LIMIT 1) as T
+		ON theme.id = fk_id
+		LEFT JOIN `user` ON theme.user_id = `user`.id
+		GROUP BY theme.id, a_id
+		ORDER BY theme.create_time DESC
+	</select>
+</mapper>
