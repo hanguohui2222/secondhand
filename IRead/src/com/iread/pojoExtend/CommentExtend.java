@@ -1,16 +1,16 @@
 package com.iread.pojoExtend;
 
 public class CommentExtend {
-	
+
 	private String userId;
 
-    private String subjectId;
+	private String subjectId;
 
-    private Integer type;
+	private Integer type;
 
-    private String content;
+	private String content;
 
-    private String parentId;
+	private String parentId;
 
 	public String getUserId() {
 		return userId;
@@ -51,5 +51,5 @@ public class CommentExtend {
 	public void setParentId(String parentId) {
 		this.parentId = parentId;
 	}
-    
+
 }

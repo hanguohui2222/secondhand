@@ -7,25 +7,25 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface CollectMapper {
-    int countByExample(CollectExample example);
+	int countByExample(CollectExample example);
 
-    int deleteByExample(CollectExample example);
+	int deleteByExample(CollectExample example);
 
-    int deleteByPrimaryKey(CollectKey key);
+	int deleteByPrimaryKey(CollectKey key);
 
-    int insert(Collect record);
+	int insert(Collect record);
 
-    int insertSelective(Collect record);
+	int insertSelective(Collect record);
 
-    List<Collect> selectByExample(CollectExample example);
+	List<Collect> selectByExample(CollectExample example);
 
-    Collect selectByPrimaryKey(CollectKey key);
+	Collect selectByPrimaryKey(CollectKey key);
 
-    int updateByExampleSelective(@Param("record") Collect record, @Param("example") CollectExample example);
+	int updateByExampleSelective(@Param("record") Collect record, @Param("example") CollectExample example);
 
-    int updateByExample(@Param("record") Collect record, @Param("example") CollectExample example);
+	int updateByExample(@Param("record") Collect record, @Param("example") CollectExample example);
 
-    int updateByPrimaryKeySelective(Collect record);
+	int updateByPrimaryKeySelective(Collect record);
 
-    int updateByPrimaryKey(Collect record);
+	int updateByPrimaryKey(Collect record);
 }

@@ -36,15 +36,13 @@ public class ArticleController {
 
 	// 接收带文件的文章数据
 	@RequestMapping(value = "/publichArticleWithImg")
-	public @ResponseBody
-	ArticleExtend publichArticleWithImg(ArticleExtend article,
-			MultipartFile file) throws Exception {
+	public @ResponseBody ArticleExtend publichArticleWithImg(ArticleExtend article, MultipartFile file)
+			throws Exception {
 
 		// 设置recommend的路径，默认为空
 		article.setBookImgPath(null);
 		// 上传图片
-		if (file != null && file.getOriginalFilename() != null
-				&& file.getOriginalFilename().length() > 0) {
+		if (file != null && file.getOriginalFilename() != null && file.getOriginalFilename().length() > 0) {
 
 			// 存储图片的物理路径
 			String pic_path = "F:\\develop\\upload\\temp\\";
@@ -52,8 +50,7 @@ public class ArticleController {
 			// 取出图片原始名称
 			// String originalFimeName = file.getOriginalFilename();
 			// 根据文件内容获取文件类型
-			String type = FileUitil.checkType(file.getContentType(),
-					file.getInputStream());
+			String type = FileUitil.checkType(file.getContentType(), file.getInputStream());
 
 			// 新的图片名称
 			String newFileName = UUID.randomUUID() + "." + type;
@@ -75,9 +72,7 @@ public class ArticleController {
 
 	// 接收带文件的文章数据
 	@RequestMapping(value = "/publichArticle")
-	public @ResponseBody
-	ArticleExtend publichArticle(@RequestBody ArticleExtend article)
-			throws Exception {
+	public @ResponseBody ArticleExtend publichArticle(@RequestBody ArticleExtend article) throws Exception {
 		System.out.println(".............");
 		// 调用service保存数据库到数据库
 		String articleId = articleService.saveArticle(article);
@@ -87,15 +82,12 @@ public class ArticleController {
 
 	// 接收带文件的文章数据
 	@RequestMapping(value = "/uploadAutio")
-	public @ResponseBody
-	Status uploadAutio(ArticleExtend article, MultipartFile file)
-			throws Exception {
+	public @ResponseBody Status uploadAutio(ArticleExtend article, MultipartFile file) throws Exception {
 
 		// 设置recommend的路径，默认为空
 		article.setAudioPath(null);
 		// 上传图片
-		if (file != null && file.getOriginalFilename() != null
-				&& file.getOriginalFilename().length() > 0) {
+		if (file != null && file.getOriginalFilename() != null && file.getOriginalFilename().length() > 0) {
 
 			// 存储图片的物理路径
 			String pic_path = "F:\\develop\\upload\\audio\\";
@@ -103,8 +95,7 @@ public class ArticleController {
 			// 取出图片原始名称
 			// String originalFimeName = file.getOriginalFilename();
 			// 根据文件内容获取文件类型
-			String type = FileUitil.checkType(file.getContentType(),
-					file.getInputStream());
+			String type = FileUitil.checkType(file.getContentType(), file.getInputStream());
 
 			// 新的图片名称
 			String newFileName = UUID.randomUUID() + "." + type;
@@ -131,30 +122,26 @@ public class ArticleController {
 
 	/**
 	 * 分页查询文章数据
+	 * 
 	 * @param pageSize
 	 * @param offset
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/findArticleList")
-	public @ResponseBody
-	PageInfo findArticleList(Integer pageNum, Integer pageSize) throws Exception {
-		
+	public @ResponseBody PageInfo findArticleList(Integer pageNum, Integer pageSize) throws Exception {
+
 		return articleService.findArticlesByPage(pageNum, pageSize);
 	}
-	
-	
+
 	@RequestMapping(value = "/getArticleContent")
-	public @ResponseBody
-	Article getArticleContent(String articleId) throws Exception {
-		
+	public @ResponseBody Article getArticleContent(String articleId) throws Exception {
+
 		return articleService.findArticleByIdWithBlob(articleId);
 	}
-	
-	
+
 	@RequestMapping(value = "/updateLookNum")
-	public @ResponseBody
-	Status updateLookNum(String articleId) throws Exception {
+	public @ResponseBody Status updateLookNum(String articleId) throws Exception {
 		Article article = articleService.findArticleById(articleId);
 		Article record = new Article();
 		Status status = new Status();

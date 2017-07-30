@@ -5,8 +5,8 @@ import java.util.Date;
 import com.iread.pojo.Theme;
 import com.iread.pojo.ThemeArticle;
 
-public class ThemeCustom extends Theme{
-	
+public class ThemeCustom extends Theme {
+
 	private ThemeArticle lastArticle;
 
 	public ThemeArticle getLastArticle() {
@@ -16,5 +16,5 @@ public class ThemeCustom extends Theme{
 	public void setLastArticle(ThemeArticle lastArticle) {
 		this.lastArticle = lastArticle;
 	}
-	
+
 }

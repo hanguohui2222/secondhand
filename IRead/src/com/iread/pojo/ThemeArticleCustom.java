@@ -1,5 +1,5 @@
 package com.iread.pojo;
 
-public class ThemeArticleCustom extends ThemeArticle{
-	
+public class ThemeArticleCustom extends ThemeArticle {
+
 }

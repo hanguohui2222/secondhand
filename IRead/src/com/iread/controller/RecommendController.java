@@ -40,30 +40,25 @@ public class RecommendController {
 	@Autowired
 	private RecommendService recommendService;
 
-	//接收带文件的推荐数据
+	// 接收带文件的推荐数据
 	@RequestMapping(value = "/publihRecommendWithImg")
-	public @ResponseBody
-	Status publihRecommendWithImg(RecommendExtend recommend,
-			MultipartFile file) throws Exception {
+	public @ResponseBody Status publihRecommendWithImg(RecommendExtend recommend, MultipartFile file) throws Exception {
 
-		//设置recommend的路径，默认为空
+		// 设置recommend的路径，默认为空
 		recommend.setBookImg(null);
 		// 上传图片
-		if (file != null && file.getOriginalFilename() != null
-				&& file.getOriginalFilename().length() > 0) {
+		if (file != null && file.getOriginalFilename() != null && file.getOriginalFilename().length() > 0) {
 
 			// 存储图片的物理路径
 			String pic_path = "F:\\develop\\upload\\temp\\";
 
 			// 取出图片原始名称
-			//String originalFimeName = file.getOriginalFilename();
-			//根据文件内容获取文件类型
+			// String originalFimeName = file.getOriginalFilename();
+			// 根据文件内容获取文件类型
 			String type = FileUitil.checkType(file.getContentType(), file.getInputStream());
-			
-			
+
 			// 新的图片名称
-			String newFileName = UUID.randomUUID()
-					+ "." + type;
+			String newFileName = UUID.randomUUID() + "." + type;
 
 			// 新的图片
 			File newFile = new File(pic_path + newFileName);
@@ -80,11 +75,10 @@ public class RecommendController {
 		status.setStatus(Status.ok);
 		return status;
 	}
-	
-	//接收普通推荐数据,不带文件
+
+	// 接收普通推荐数据,不带文件
 	@RequestMapping(value = "/publihRecommend")
-	public @ResponseBody
-	Status publihRecommend(@RequestBody RecommendExtend recommend) throws Exception {
+	public @ResponseBody Status publihRecommend(@RequestBody RecommendExtend recommend) throws Exception {
 
 		System.out.println("publihRecommend");
 		// 调用service保存数据库到数据库
@@ -93,18 +87,18 @@ public class RecommendController {
 		status.setStatus(Status.ok);
 		return status;
 	}
-	
+
 	/**
 	 * 分页查询推荐数据
+	 * 
 	 * @param pageSize
 	 * @param offset
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/findRcdList")
-	public @ResponseBody
-	PageInfo findRcdList(Integer pageNum, Integer pageSize) throws Exception {
-		
+	public @ResponseBody PageInfo findRcdList(Integer pageNum, Integer pageSize) throws Exception {
+
 		return recommendService.findRecommendsByPage(pageNum, pageSize);
 	}
 

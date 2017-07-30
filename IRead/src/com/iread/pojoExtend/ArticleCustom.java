@@ -29,5 +29,4 @@ public class ArticleCustom extends Article {
 		this.commentList = commentList;
 	}
 
-
 }

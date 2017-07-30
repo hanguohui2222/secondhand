@@ -13,16 +13,16 @@ import com.iread.utils.Status;
 
 /**
  * 用户service的实现类
+ * 
  * @author zjl
  *
  */
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
-	//扫描，自动注入usermapper
+	// 扫描，自动注入usermapper
 	@Autowired
 	private UserMapper userMapper;
-	
-	
+
 	@Override
 	public void insertUser(UserExtend user) throws Exception {
 		User newUser = new User();
@@ -31,9 +31,9 @@ public class UserServiceImpl implements UserService{
 		newUser.setUsername(user.getUsername());
 		newUser.setRegistTime(new Date());
 		newUser.setLastLoginTime(new Date());
-		
+
 		userMapper.insertSelective(newUser);
-		
+
 	}
 
 	@Override

@@ -28,20 +28,18 @@ public class CommentController {
 	// 自动注入service
 	@Autowired
 	private CommentService commentService;
-	
+
 	@RequestMapping(value = "/findCommentList")
-	public @ResponseBody
-	List<CommentCustom> findCommentList(Integer type, String subjectId) throws Exception {
-		 
-		//调用service查询对应的评论数据，以及评论对应的用户
+	public @ResponseBody List<CommentCustom> findCommentList(Integer type, String subjectId) throws Exception {
+
+		// 调用service查询对应的评论数据，以及评论对应的用户
 		return commentService.findCommentsBySubjectId(subjectId);
 	}
-	
+
 	@RequestMapping(value = "/publishComment")
-	public @ResponseBody
-	Status publishComment(@RequestBody CommentExtend comment) throws Exception {
-		 
-		//调用service查询对应的评论数据，以及评论对应的用户
+	public @ResponseBody Status publishComment(@RequestBody CommentExtend comment) throws Exception {
+
+		// 调用service查询对应的评论数据，以及评论对应的用户
 		commentService.insertComment(comment);
 		Status status = new Status();
 		status.setStatus(Status.ok);

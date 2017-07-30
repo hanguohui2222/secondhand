@@ -13,9 +13,8 @@ public interface ArticleService {
 	// 分页查询推荐信息
 	public PageInfo findArticlesByPage(int pageNum, int pageSize) throws Exception;
 
-	
-	//根据id查询文章内容
+	// 根据id查询文章内容
 	public Article findArticleByIdWithBlob(String articleId) throws Exception;
-	
+
 	public Article findArticleById(String articleId) throws Exception;
 }

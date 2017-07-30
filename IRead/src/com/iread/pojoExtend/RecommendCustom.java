@@ -8,15 +8,16 @@ import com.iread.pojo.User;
 
 /**
  * 推荐数据扩展类
+ * 
  * @author zjl
  *
  */
-public class RecommendCustom extends Recommend{
+public class RecommendCustom extends Recommend {
 
-	//用户信息
+	// 用户信息
 	private User user;
-	
-	//评论列表
+
+	// 评论列表
 	private List<CommentCustom> commentList;
 
 	public User getUser() {
@@ -34,5 +35,5 @@ public class RecommendCustom extends Recommend{
 	public void setCommentList(List<CommentCustom> commentList) {
 		this.commentList = commentList;
 	}
-	
+
 }

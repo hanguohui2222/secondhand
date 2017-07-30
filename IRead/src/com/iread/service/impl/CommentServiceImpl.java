@@ -20,30 +20,27 @@ public class CommentServiceImpl implements CommentService {
 	// 扫描，自动注入usermapper
 	@Autowired
 	private CommentMapper commentMapper;
-	
+
 	@Autowired
 	private CommentExtendMapper extendMapper;
 
 	@Override
-	public List<CommentCustom> findCommentsBySubjectId(String subjectId)
-			throws Exception {
+	public List<CommentCustom> findCommentsBySubjectId(String subjectId) throws Exception {
 		List<CommentCustom> list = extendMapper.findCommentsByFK(subjectId);
 		return list;
 	}
 
 	@Override
 	public void insertComment(CommentExtend extend) throws Exception {
-		
+
 		Comment record = new Comment();
 		BeanUtils.copyProperties(extend, record);
 		record.setCreateTime(new Date());
 		record.setIsReplay(true);
 		record.setId(UUID.randomUUID().toString());
 		record.setIsVisible(true);
-		//调用mapper添加评论信息
+		// 调用mapper添加评论信息
 		commentMapper.insert(record);
 	}
-	
-	
 
 }

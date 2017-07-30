@@ -2,6 +2,7 @@ package com.iread.pojoExtend;
 
 /**
  * 接收用户参数
+ * 
  * @author zjl
  *
  */
@@ -9,9 +10,9 @@ public class UserExtend {
 
 	private String id;
 
-    private String password;
+	private String password;
 
-    private String username;
+	private String username;
 
 	public String getId() {
 		return id;
@@ -36,5 +37,5 @@ public class UserExtend {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-    
+
 }

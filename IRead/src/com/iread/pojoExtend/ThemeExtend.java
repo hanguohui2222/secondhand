@@ -4,35 +4,35 @@ public class ThemeExtend {
 
 	private String id;
 
-    private String userId;
+	private String userId;
 
-    private String title;
+	private String title;
 
-    private String subtitle;
+	private String subtitle;
 
-    private String suitSb;
+	private String suitSb;
 
-    private String themeImg;
-    
-    private String describe;
+	private String themeImg;
 
-    private String subscribeInfo;
+	private String describe;
 
-    public String getDescribe() {
-        return describe;
-    }
+	private String subscribeInfo;
 
-    public void setDescribe(String describe) {
-        this.describe = describe == null ? null : describe.trim();
-    }
+	public String getDescribe() {
+		return describe;
+	}
 
-    public String getSubscribeInfo() {
-        return subscribeInfo;
-    }
+	public void setDescribe(String describe) {
+		this.describe = describe == null ? null : describe.trim();
+	}
 
-    public void setSubscribeInfo(String subscribeInfo) {
-        this.subscribeInfo = subscribeInfo == null ? null : subscribeInfo.trim();
-    }
+	public String getSubscribeInfo() {
+		return subscribeInfo;
+	}
+
+	public void setSubscribeInfo(String subscribeInfo) {
+		this.subscribeInfo = subscribeInfo == null ? null : subscribeInfo.trim();
+	}
 
 	public String getId() {
 		return id;
@@ -81,5 +81,5 @@ public class ThemeExtend {
 	public void setThemeImg(String themeImg) {
 		this.themeImg = themeImg;
 	}
-    
+
 }

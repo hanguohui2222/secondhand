@@ -5,18 +5,19 @@ import com.iread.pojo.User;
 
 /**
  * 评论数据扩展类
+ * 
  * @author zjl
  *
  */
-public class CommentCustom extends Comment{
+public class CommentCustom extends Comment {
 
-	//评论者
+	// 评论者
 	private User user;
-	
-	//父评论
+
+	// 父评论
 	private Comment pComment;
-	
-	//父评论作者
+
+	// 父评论作者
 	private User pUser;
 
 	public User getUser() {
@@ -42,5 +43,5 @@ public class CommentCustom extends Comment{
 	public void setPUser(User pUser) {
 		this.pUser = pUser;
 	}
-	
+
 }

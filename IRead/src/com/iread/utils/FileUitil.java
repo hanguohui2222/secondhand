@@ -33,14 +33,13 @@ public class FileUitil {
 			if (bytes == 0) {
 				System.out.println("读取文件头信息异常");
 			} else {
-				//获取文件头的16进制表示
+				// 获取文件头的16进制表示
 				String filetypeHex = bytesToHexString(b).toUpperCase();
-				Iterator<Entry<String, String>> entryiterator = FILE_TYPE_MAP
-						.entrySet().iterator();
+				Iterator<Entry<String, String>> entryiterator = FILE_TYPE_MAP.entrySet().iterator();
 				while (entryiterator.hasNext()) {
 					Entry<String, String> entry = entryiterator.next();
 					String fileTypeHexValue = entry.getValue().toUpperCase();
-					//对比文件类型
+					// 对比文件类型
 					if (filetypeHex.toUpperCase().startsWith(fileTypeHexValue)) {
 						realType = entry.getKey();
 					}

@@ -12,7 +12,7 @@ public interface ThemeService {
 	public void saveTheme(ThemeWithBLOBs theme) throws Exception;
 
 	// 更新推荐信息
-	public void updateTheme(String id,ThemeWithBLOBs theme) throws Exception;
+	public void updateTheme(String id, ThemeWithBLOBs theme) throws Exception;
 
 	// 删除推荐信息
 	public void deleteThemeById(String id) throws Exception;

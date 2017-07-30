@@ -35,7 +35,7 @@ public class ThemeServiceImpl implements ThemeService {
 	}
 
 	@Override
-	public void updateTheme(String id,ThemeWithBLOBs theme) throws Exception {
+	public void updateTheme(String id, ThemeWithBLOBs theme) throws Exception {
 		// TODO Auto-generated method stub
 
 	}
@@ -54,13 +54,13 @@ public class ThemeServiceImpl implements ThemeService {
 
 	@Override
 	public ThemeWithBLOBs findThemeById(String id) throws Exception {
-		
+
 		return themeMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
 	public PageInfo findAllByPage(int pageNum, int pageSize) throws Exception {
-		
+
 		// 调用pageHelper进行分页查询
 		PageHelper.startPage(pageNum, pageSize, true);
 
@@ -73,8 +73,7 @@ public class ThemeServiceImpl implements ThemeService {
 	}
 
 	@Override
-	public PageInfo findOrdersByPage(int pageNum, int pageSize)
-			throws Exception {
+	public PageInfo findOrdersByPage(int pageNum, int pageSize) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

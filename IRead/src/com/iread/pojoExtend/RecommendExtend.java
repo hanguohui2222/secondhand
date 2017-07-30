@@ -2,16 +2,16 @@ package com.iread.pojoExtend;
 
 //接收客户端传回的推荐数据
 public class RecommendExtend {
-	
+
 	private String userId;
-	
+
 	private String content;
-	
+
 	private String bookImg;
 
-    private String bookTitle;
+	private String bookTitle;
 
-    private String bookAuthor;
+	private String bookAuthor;
 
 	public String getUserId() {
 		return userId;
@@ -52,5 +52,5 @@ public class RecommendExtend {
 	public void setBookAuthor(String bookAuthor) {
 		this.bookAuthor = bookAuthor;
 	}
-    
+
 }

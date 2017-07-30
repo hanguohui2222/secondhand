@@ -30,14 +30,14 @@ public class RecommendServiceImpl implements RecommendService {
 	// 扫描，自动注入usermapper
 	@Autowired
 	private RecommendMapper rcdMapper;
-	
+
 	@Autowired
 	private RecommendExtendMapper rcdExtendMapper;
 
 	@Override
 	public void saveRecommend(RecommendExtend recommend) throws Exception {
 		Recommend record = new Recommend();
-		//将RecommendExtend中的属性拷贝到Recommend类型的变量中
+		// 将RecommendExtend中的属性拷贝到Recommend类型的变量中
 		BeanUtils.copyProperties(recommend, record);
 		record.setId(UUID.randomUUID().toString());
 		record.setUserId(recommend.getUserId());
@@ -60,14 +60,14 @@ public class RecommendServiceImpl implements RecommendService {
 	@Override
 	public PageInfo findRecommendsByPage(int pageNum, int pageSize) throws Exception {
 		// 调用pageHelper进行分页查询
-		//获取第pageNum页，pageSize条内容，true查询总数count
+		// 获取第pageNum页，pageSize条内容，true查询总数count
 		PageHelper.startPage(pageNum, pageSize, true);
-		
+
 		List<RecommendCustom> list = rcdExtendMapper.findRcdList();
-		
-		//用PageInfo对结果集进行封装
+
+		// 用PageInfo对结果集进行封装
 		PageInfo page = new PageInfo(list);
-		
+
 		return page;
 	}
 

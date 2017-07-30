@@ -4,27 +4,28 @@ import java.util.Date;
 
 /**
  * 接收客户端传回的文章信息
+ * 
  * @author zjl
  *
  */
 public class ArticleExtend {
 	private String id;
-	
+
 	private String userId;
 
-    private String title;
+	private String title;
 
-    private String bookImgPath;
+	private String bookImgPath;
 
-    private String audioPath;
+	private String audioPath;
 
-    private Integer audioDuration;
+	private Integer audioDuration;
 
-    private String audioInfo;
+	private String audioInfo;
 
-    private String content;
-    
-    private String abstractInfo;
+	private String content;
+
+	private String abstractInfo;
 
 	public String getId() {
 		return id;
@@ -97,6 +98,5 @@ public class ArticleExtend {
 	public void setAbstractInfo(String abstractInfo) {
 		this.abstractInfo = abstractInfo;
 	}
-    
-    
+
 }

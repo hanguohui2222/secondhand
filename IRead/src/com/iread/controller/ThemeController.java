@@ -35,15 +35,12 @@ public class ThemeController {
 
 	// 接收带文件的推荐数据
 	@RequestMapping(value = "/publihThemeWithImg")
-	public @ResponseBody
-	Status publihThemeWithImg(ThemeWithBLOBs theme, MultipartFile file)
-			throws Exception {
+	public @ResponseBody Status publihThemeWithImg(ThemeWithBLOBs theme, MultipartFile file) throws Exception {
 
 		// 设置theme的路径，默认为空
 		theme.setThemeImg(null);
 		// 上传图片
-		if (file != null && file.getOriginalFilename() != null
-				&& file.getOriginalFilename().length() > 0) {
+		if (file != null && file.getOriginalFilename() != null && file.getOriginalFilename().length() > 0) {
 
 			// 存储图片的物理路径
 			String pic_path = "F:\\develop\\upload\\temp\\";
@@ -51,8 +48,7 @@ public class ThemeController {
 			// 取出图片原始名称
 			// String originalFimeName = file.getOriginalFilename();
 			// 根据文件内容获取文件类型
-			String type = FileUitil.checkType(file.getContentType(),
-					file.getInputStream());
+			String type = FileUitil.checkType(file.getContentType(), file.getInputStream());
 
 			// 新的图片名称
 			String newFileName = UUID.randomUUID() + "." + type;
@@ -75,43 +71,41 @@ public class ThemeController {
 
 	// 接收专栏数据,不带文件
 	@RequestMapping(value = "/publishTheme")
-	public @ResponseBody
-	Status publishTheme(@RequestBody ThemeWithBLOBs theme)
-			throws Exception {
+	public @ResponseBody Status publishTheme(@RequestBody ThemeWithBLOBs theme) throws Exception {
 
 		System.out.println("publishTheme");
 		// 调用service保存数据库到数据库
-		themeService.saveTheme(theme); 
+		themeService.saveTheme(theme);
 		Status status = new Status();
 		status.setStatus(Status.ok);
 		return status;
 	}
-	
+
 	/**
 	 * 分页查询推荐数据
+	 * 
 	 * @param pageSize
 	 * @param offset
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/findAllList")
-	public @ResponseBody
-	PageInfo findAllList(Integer pageNum, Integer pageSize) throws Exception {
-		
+	public @ResponseBody PageInfo findAllList(Integer pageNum, Integer pageSize) throws Exception {
+
 		return themeService.findAllByPage(pageNum, pageSize);
 	}
-	
+
 	/**
 	 * 获取专栏详情
+	 * 
 	 * @param articleId
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/getThemeDetail")
-	public @ResponseBody
-	ThemeWithBLOBs getThemeDetail(String themeId) throws Exception {
-		
+	public @ResponseBody ThemeWithBLOBs getThemeDetail(String themeId) throws Exception {
+
 		return themeService.findThemeById(themeId);
 	}
-	
+
 }

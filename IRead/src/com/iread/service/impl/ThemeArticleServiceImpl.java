@@ -17,8 +17,8 @@ public class ThemeArticleServiceImpl implements ThemeArticleService {
 	public List<ThemeArticle> findLastUpdate(String themeId) throws Exception {
 		List<ThemeArticle> list = tArticleMapper.selectByFkWithLimt(themeId);
 		for (ThemeArticle article : list) {
-			String content = article.getContent().length() > 30 ? article
-					.getContent().substring(0, 31) : article.getContent();
+			String content = article.getContent().length() > 30 ? article.getContent().substring(0, 31)
+					: article.getContent();
 			article.setContent(content);
 		}
 		return list;

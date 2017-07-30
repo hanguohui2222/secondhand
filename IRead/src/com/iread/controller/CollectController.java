@@ -14,8 +14,7 @@ import com.iread.utils.Status;
 public class CollectController {
 
 	@RequestMapping(value = "/getCollectStatus")
-	public @ResponseBody
-	Status getCollectStatus(String userId, String subjectId) throws Exception {
+	public @ResponseBody Status getCollectStatus(String userId, String subjectId) throws Exception {
 
 		Status status = new Status();
 		status.setStatus(Status.ok);
